@@ -19,10 +19,13 @@
     --accent: var(--yellow);
   }
 .imagem-topo {
-  background: url('inicio.png') no-repeat center center;
+  background-image: url('inicio.png');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  height: 250px;
   width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* ou outro ratio que se adapte */
 }
   html {
     scroll-padding-top: 4rem;
