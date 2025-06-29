@@ -27,7 +27,18 @@
   height: auto;
   aspect-ratio: 16/9; /* ou outro ratio que se adapte */
 }
-  html {
+ @media (max-width: 600px) {
+  .imagem-topo {
+    aspect-ratio: 3/2;
+  }
+}
+@media (min-width: 601px) {
+  .imagem-topo {
+    aspect-ratio: 16/9;
+  }
+}
+    
+    html {
     scroll-padding-top: 4rem;
   }
 
