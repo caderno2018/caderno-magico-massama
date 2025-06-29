@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>  
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Caderno Mágico</title>
+  <style>
+  :root {
+    --beige: #d8c7a3; /* nova cor substituta do purple */
+    --yellow: #FFD700;
+    --green: #1C8374;
+    --bg-light: #f9f7f1;
+    --text: #333;
+    --accent: var(--yellow);
+  }
+
+  html {
+    scroll-padding-top: 4rem;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-light);
+    color: var(--text);
+  }
+
+  .imagem-topo {
+    background: url('Topo.png') no-repeat center center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+  }
+
+  header {
+    background: var(--bg-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  nav a {
+    margin: 0 1rem;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 0.25rem;
+    position: relative;
+  }
+
+  nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--yellow);
+    transition: width .3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  nav a:hover::after,
+  nav a:focus::after {
+    width: 100%;
+  }
+
+  /* Faixa simples com 3 imagens lado a lado */
+  .image-strip {
+    max-width: 1000px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background: transparent;
+    padding: 0.5rem 0;
+  }
+
+  .image-strip img {
+  height: 250px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  main section:nth-child(odd) {
+    background-color: white;
+  }
+
+  main section:nth-child(even) {
+    background-color: #f4f4f4;
+  }
+
+  section h2 {
+    color: var(--beige);
+    padding-bottom: .5rem;
+    position: relative;
+  }
+
+  section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--green);
+    margin-top: 8px;
+  }
+
+  section h3 {
+    color: var(--green);
+    margin-top: 2rem;
+  }
+
+  /* Texto justificado e com espaçamento para melhor leitura */
+  #quem-somos p,
+  #quem-somos ul,
+  section p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  #quem-somos ul {
+    padding-left: 1.5rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .card {
+    flex: 1 1 calc(33% - 1rem);
+    background: white;
+    border: 2px solid white;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    color: var(--beige);
+  }
+
+  footer {
+    background: var(--beige);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  footer a {
+    color: var(--yellow);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+    }
+
+    .card {
+      flex: 1 1 100%;
+    }
+
+    nav {
+      flex-wrap: wrap;
+    }
+
+    .image-strip {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-strip img {
+      width: 80%;
+      max-width: none;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="imagem-topo"></div>
+
+  <header>
+    <nav>
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#centro-estudos">Centro de Estudos</a>
+      <a href="#explicacoes">Explicações</a>
+      <a href="#contactos">Contactos</a>
+      <a href="#candidaturas">Candidaturas</a>
+    </nav>
+  </header>
+
+  <!-- Faixa simples com 3 imagens lado a lado -->
+  <div class="image-strip">
+    <img src="imagem1.png" alt="Imagem 1" />
+    <img src="imagem2.png" alt="Imagem 2" />
+    <img src="imagem3.png" alt="Imagem 3" />
+  </div>
+
+  <main>
+    <section id="quem-somos">
+      <h2>Quem Somos</h2>
+      <p>Desde 2018, o <strong>Caderno Mágico de Massamá</strong> dedica-se a apoiar o percurso académico de crianças e jovens, desde o 1.º ciclo até ao ensino secundário. Acreditamos que cada aluno tem potencial para aprender, crescer e brilhar — e trabalhamos diariamente para transformar esse potencial em resultados reais.</p>
+
+      <p>Mais do que um simples centro de estudos, somos uma equipa apaixonada pela educação, que aposta numa relação próxima com os alunos e suas famílias. Criamos um ambiente acolhedor, motivador e focado nas necessidades de cada criança.</p>
+
+      <h3>O que oferecemos</h3>
+      <ul>
+        <li>Explicações individuais e em grupo</li>
+        <li>Estudo acompanhado em salas de estudo</li>
+        <li>Preparação para testes e exames nacionais</li>
+        <li>Apoio psicopedagógico e orientação vocacional</li>
+        <li>Atividades lúdico-pedagógicas</li>
+      </ul>
+
+      <h3>Missão</h3>
+      <p>Promover o sucesso educativo de cada aluno, desenvolvendo as suas competências, autoconfiança e autonomia, através de métodos de ensino diferenciados e acompanhamento contínuo.</p>
+
+      <h3>Visão</h3>
+      <p>No Caderno Mágico de Massamá, aspiramos a ser um espaço educativo inclusivo e dinâmico, onde cada aluno encontra condições para desenvolver plenamente as suas capacidades académicas, pessoais e sociais. Acreditamos numa educação que vai além do ensino tradicional, valorizando a inovação pedagógica e a adaptação constante às necessidades do século XXI. Queremos construir uma comunidade escolar que promova a equidade, o respeito pela diversidade e o sucesso de todos, preparando os nossos alunos para os desafios do futuro com confiança, criatividade e sentido crítico.</p>
+
+      <h3>Valores</h3>
+      <p>No Caderno Mágico de Massamá valorizamos cada aluno como único. Respeitamos o seu ritmo de aprendizagem e as suas características individuais, acreditando que todos têm potencial para crescer e aprender com confiança. Trabalhamos com rigor e compromisso, pautando a nossa atuação por princípios de profissionalismo, ética e dedicação. Criamos relações de proximidade com os nossos alunos e famílias, promovendo um ambiente de motivação e confiança mútua. Apostamos na criatividade e na inovação, aplicando métodos dinâmicos e ajustados às exigências atuais da educação. E porque acreditamos que é sempre possível fazer melhor, assumimos uma postura de melhoria contínua, avaliando e ajustando o nosso trabalho para garantir um serviço de excelência.</p>
+    </section>
+
+    <section id="centro-estudos">
+      <h2>Centro de Estudos</h2>
+      <p>As nossas salas de estudo são concebidas para promover o sucesso académico, estimulando a autonomia e a responsabilidade dos alunos. Num ambiente calmo e construtivo, os professores estão sempre disponíveis para esclarecer dúvidas, orientar nos trabalhos escolares e ajudar na gestão eficiente do estudo. Após a realização dos trabalhos de casa, dedicamos tempo ao reforço das aprendizagens e ao apoio individualizado para superar dificuldades específicas. Os grupos são organizados por grau de ensino, garantindo uma abordagem personalizada e eficaz. Procuramos desenvolver hábitos de estudo autónomos e colaborativos, adaptando o apoio aos diferentes ritmos de aprendizagem. Encorajamos os alunos a enfrentar e resolver as suas dificuldades de forma ativa, ensinando métodos e técnicas de estudo eficazes que potenciem o seu desempenho académico..</p>
+    </section>
+
+    <section id="explicacoes">
+      <h2>Explicações</h2>
+      <p>Oferecemos acompanhamento em todas as disciplinas, desde o 1.º ciclo até ao ensino secundário. O nosso objetivo é apoiar o estudante de forma dedicada e empenhada, focando-se nas dificuldades e dúvidas reais de cada aluno. Como acreditamos que cada aluno é único, as explicações são sempre personalizadas. Contamos com uma equipa de explicadores pronta para ajudar-te a melhorar no que realmente importa, para que possas atingir os teus objetivos escolares. Aqui não damos aulas tradicionais, mas sim um acompanhamento que ajuda a desenvolver as tuas competências e confiança.
+
+A preparação para os exames nacionais é feita através da identificação das competências a trabalhar, utilizando metodologias pedagógicas direcionadas aos conteúdos exigidos nos diversos exames. Realizamos uma avaliação personalizada para compreender as necessidades pedagógicas de cada aluno, ajudando a aperfeiçoar as técnicas para responder às questões dos exames com maior segurança. Procuramos desenvolver a confiança dos alunos nas suas próprias capacidades, oferecendo explicações individuais para o ensino básico e secundário, sempre com apoio personalizado e focado nas dificuldades específicas de cada estudante.
+
+Também organizamos explicações em grupo, com grupos reduzidos de 2 ou 3 alunos do mesmo nível de ensino, sempre que possível.</p>
+    </section>
+
+  <section id="contactos" style="display:flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; max-width: 1000px; margin: 0 auto; padding: 1rem;">
+  <div style="flex: 1 1 300px; min-width: 280px;">
+    <h2>Contactos</h2>
+    <p>🏠 <strong>Morada:</strong> 
+      <a href="https://www.google.com/maps/place/Caderno+M%C3%A1gico+de+Massam%C3%A1/@38.7554332,-9.2894592,17z" target="_blank" rel="noopener noreferrer">
+        Praceta Fernão Lopes 3, 2745-774 Massamá
+      </a>
+    </p>
+    <p>📞 <strong>Telefone:</strong> 
+      <a href="tel:+351962239429">962 239 429</a>
+    </p>
+    <p>📧 <strong>Email:</strong> 
+      <a href="mailto:cadernomagicomassama@gmail.com">cadernomagicomassama@gmail.com</a>
+    </p>
+    <p>🕒 <strong>Horário:</strong> 2.ª a 6.ª, 07:30–19:30</p>
+  </div>
+
+  <div style="flex: 1 1 300px; min-width: 280px; height: 250px;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.457028090206!2d-9.2883025846633!3d38.75543317964642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf3c63b7bed9%3A0x22be810e7450e9d!2sCaderno%20M%C3%A1gico%20de%20Massam%C3%A1!5e0!3m2!1spt-PT!2spt!4v1688020604000!5m2!1spt-PT!2spt"
+      width="100%"
+      height="100%"
+      style="border:0; border-radius: 8px;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Mapa do Caderno Mágico de Massamá"
+    ></iframe>
+  </div>
+</section>
+
+    <section id="candidaturas">
+      <h2>Candidaturas</h2>
+      <p>Se gostavas de fazer parte da nossa equipa, envia-nos o teu CV!<br>
+      Partilha connosco a tua experiência e motivação para trabalhar com crianças e jovens, desde o 1.º ciclo ao ensino secundário.<br>
+      Procuramos pessoas dedicadas, com paixão pela educação e vontade de fazer a diferença.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Caderno Mágico de Massamá • <a href="#contactos">Contacte-nos</a></p>
+  </footer>
+
+</body>
+</html>
